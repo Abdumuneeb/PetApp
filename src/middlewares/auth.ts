@@ -16,10 +16,6 @@ export const authenticateToken = (
 ): void => {
   const authHeader = req.headers.authorization;
 
-  console.log("Auth Header:", authHeader); // Debugging line
-  console.log("test1", !authHeader);
-  console.log("test2", !authHeader?.startsWith("Bearer"));
-
   if (!authHeader || !authHeader.startsWith("Bearer")) {
     res.status(401).json({ message: "No token provided" });
     return;
