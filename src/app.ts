@@ -14,7 +14,7 @@ app.use(morgan("dev"));
 app.use(express.json());
 
 // user Routes
-app.use("/api/users", userRoutes);
+app.use("/api/", userRoutes);
 
 // auth Routes
 app.use("/api/auth", authRoutes);
